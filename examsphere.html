@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="tabTitle">examsphere</title>
+  <link rel="icon" href="./res/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/examsphere.css">
+  <link rel="stylesheet" href="./css/animate.css">
+</head>
+
+<body>
+  <header>
+    <div class="examsphereLogo">examsphere</div>
+  </header>
+  <div class="quiz-container" id="quiz-container">
+    <div class="quizTitle" id="quiz-title"></div>
+    <div class="questionsN" id="questionsN"></div>
+    <div class="questionsTimer" id="questionsTimer">Tempo rimanente: </div>
+    <div class="questionsComplete" id="questionsComplete"></div>
+    <!-- Domande generate dinamicamente -->
+  </div>
+
+      <!--
+  <div class="score" id="score"></div>
+      -->
+  <div class="saveDiv" id="save-score">
+    <input type="text" id="username" placeholder="Inserisci il tuo nome" />
+    <button id="complete-button">CONSEGNA</button>
+  </div>
+  <footer>
+    Copyright © 2025 vlT di Veronesi Lorenzo | All rights reserved.
+  </footer>
+  <script src="./js/examsphere.js" type="module"></script>
+ </body>
+</html>

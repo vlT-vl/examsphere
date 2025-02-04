@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px; /* Regola il valore in base all'altezza effettiva dell'header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #1e242e;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+footer {
+    width: 100%;
+    background-color: #1e242e;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+@font-face {
+    font-family: 'nasalization';
+    src: url('../res/nasalization.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.examsphereLogo {
+    font-family: 'nasalization', sans-serif;
+    font-size: 3.5vh;
+}
+
+.quiz-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    height: 30vh;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer {
+    margin: 5px 0;
+    padding: 10px;
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.answer:hover {
+    background: #e0e0e0;
+}
+
+.quizTitle {
+    font-family: "Montserrat", serif;
+    text-align: center;
+    font-size: 7vh;
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+
+.questionsN {
+    font-family: "Montserrat", serif;
+    text-align: center;
+    font-size: 1em;
+    margin: 20px auto;
+    color: #ffffff;
+    min-width: 15vh;
+    max-width: 20vh;
+    border-radius: 10px;
+    background-color: #333d4e;
+}
+
+.questionsTimer {
+    font-family: "Montserrat", serif;
+    text-align: center;
+    font-size: 1em;
+    margin: 20px auto;
+    color: #ffffff;
+    min-width: 30vh;
+    max-width: 30vh;
+    border-radius: 10px;
+    background-color: #333d4e;
+    transition: all 0.3s ease; /* Per un'animazione fluida */
+
+    /* Proprietà sticky */
+    position: sticky; /* Comportamento appiccicoso */
+    top: 7vh; /* Margine dall'alto quando diventa sticky */
+    z-index: 1000; /* Mantiene il timer sopra gli altri elementi */
+}
+
+
+.questionsComplete {
+    font-family: "Montserrat", serif;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 20px auto;
+    color: #ffffff;
+    min-width: 30vh;
+    max-width: 40vh;
+    border-radius: 10px;
+    background-color: #48556a;
+
+    /* Proprietà sticky */
+    position: sticky; /* Comportamento appiccicoso */
+    top: 10vh; /* Margine dall'alto quando diventa sticky */
+    z-index: 1000; /* Mantiene il timer sopra gli altri elementi */
+}
+
+.score {
+    font-family: "Montserrat", serif;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 20px;
+    color: #464646;
+    min-width: 17vh;
+    max-width: 22vh;
+    border-radius: 10px;
+    background-color: #d1d1d1;
+}
+
+.saveDiv {
+    margin: 20px;
+    padding-bottom: 80px;
+}
+
+.saveDiv button {
+    background-color: rgba(51, 51, 51, 0.05);
+    border-radius: 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.saveDiv input {
+    background-color: rgba(51, 51, 51, 0.05);
+    border-radius: 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    white-space: nowrap;
+    user-select: none;
+}
+
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "examsphere",
+  "version": "0.0.1",
+  "build": "R001-04022025",
+  "description": "fronted per esami professionali",
+  "license": "MIT",
+  "author": "Copyright © 2025 vlT di Veronesi Lorenzo",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
